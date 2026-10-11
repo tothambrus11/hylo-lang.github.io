@@ -1,7 +1,11 @@
 name: CI
 
+# Pull requests, from forks included, are checked here; only pushes to `main` deploy, which
+# `astro.yml` does.
 on:
+  pull_request:
   push:
+    branches: [ main ]
 
 permissions:
   contents: read
